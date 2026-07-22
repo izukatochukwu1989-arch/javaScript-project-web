@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|| Register Now, MRC PLC ||</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,0,0,0">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+
+            <div class="logo-area">
+
+                <div class="logo-area-container">
+
+                    <img src="ChatGPT_Image_Jul_11__2026__02_36_46_PM-removebg-preview.png" alt="MARC Logo">
+
+                    <div class="text-area">
+                        <h4>MARC RAILWAY CORPORATION PLC</h4>
+                        <p>E-TICKETING WEBSITE</p>
+                        <h6>LAGOS – IBADAN</h6>
+                    </div>
+
+                </div>
+
+                <!-- Desktop Login Button -->
+                <button class="login-btn" onclick="window.location.href='home.html'">
+                    Log In
+                </button>
+
+                <!-- Hamburger -->
+                <img src="./ic--outline-menu.svg" alt="Menu" class="menu-icon" id="menuIcon">
+
+            </div>
+
+            <div class="nav-container" id="navMenu">
+
+                <nav class="navbar">
+
+                    <a href="home.html">
+                        <img src="./material-symbols--home-outline-rounded.svg" alt="">
+                        <span>Home</span>
+                    </a>
+
+                    <a href="faq.html">
+                        <img src="./mdi--question-mark-circle-outline.svg" alt="">
+                        <span>FAQ</span>
+                    </a>
+
+                    <a href="terms-and-conditions.html">
+                        <img src="./si--book-line.svg" alt="">
+                        <span>Terms & Conditions</span>
+                    </a>
+
+                    <a href="privacy-policy.html">
+                        <img src="./iconoir--privacy-policy.svg" alt="">
+                        <span>Privacy Policy</span>
+                    </a>
+
+                    <a href="train-timetables.html">
+                        <img src="./material-symbols--train-outline.svg" alt="">
+                        <span>Train Timetables</span>
+                    </a>
+
+                    <a href="contact-us.html">
+                        <img src="./tabler--message.svg" alt="">
+                        <span>Contact Us</span>
+                    </a>
+
+                    <!-- Mobile Login Button -->
+                    <div class="mobile-login">
+                        <button class="login-btn-mobile" onclick="window.location.href='home.html'">
+                            Log In
+                        </button>
+                    </div>
+
+                </nav>
+
+            </div>
+
+        </div>
+    </header>
+
+
+
+
+    <main>
+
+        <!-- WELCOME SECTION -->
+        <section class="welcome-section">
+            <div class="welcome-container">
+
+                <div class="welcome-text">
+                    <marquee behavior="scroll" direction="left" scrollamount="6">
+                        Dear MRC Passenger, welcome to the online ticket booking services from MRC—simple and automated
+                        for
+                        all trains in our network. Select your train, choose your travel date, and book your ticket with
+                        ease.
+                    </marquee>
+                </div>
+
+                <div class="welcome-image">
+                    <img src="./Train-1.jpeg" alt="MRC Train">
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- REGISTER SECTION -->
+
+        <section class="register-section">
+
+            <div class="register-container">
+
+                <div class="register-header">
+                    <h2>Create Your Account</h2>
+                    <p>Register to book your train tickets online with MARC Railway Corporation PLC.</p>
+                </div>
+
+                <form id="registerForm">
+
+                    <div class="input-row">
+
+                        <div class="input-group">
+                            <label>First Name</label>
+                            <input type="text" required placeholder="Enter First Name">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Last Name</label>
+                            <input type="text" required placeholder="Enter Last Name">
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" required placeholder="example@gmail.com">
+                    </div>
+
+
+                    <div class="input-row">
+
+                        <div class="input-group">
+                            <label>Date of Birth</label>
+                            <input type="date" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Gender</label>
+
+                            <select required>
+
+                                <!-- <option value="">Select Gender</option> -->
+
+                                <option>Male</option>
+
+                                <option>Female</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+                        <label>NIN</label>
+                        <input type="text" maxlength="11" required placeholder="Enter your 11-digit NIN">
+                    </div>
+
+
+                    <div class="input-group password-group">
+
+                        <label>Password</label>
+
+                        <div class="password-box">
+
+                            <input type="password" id="password" required placeholder="Enter Password">
+
+                            <span class="material-symbols-outlined toggle-password"
+                                onclick="togglePassword('password',this)">
+                                visibility
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group password-group">
+
+                        <label>Confirm Password</label>
+
+                        <div class="password-box">
+
+                            <input type="password" id="confirmPassword" required placeholder="Confirm Password">
+
+                            <span class="material-symbols-outlined toggle-password"
+                                onclick="togglePassword('confirmPassword',this)">
+                                visibility
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="checkbox-area">
+
+                        <input type="checkbox" id="agree" required>
+
+                        <label for="agree">
+                            I have read and agree to the
+                            <a href="terms-and-conditions.html">Terms & Conditions</a>
+                            and
+                            <a href="privacy-policy.html">Privacy Policy</a>.
+                        </label>
+
+                    </div>
+
+
+                    <button type="submit" class="signup-btn">
+
+                        Sign Up
+
+                    </button>
+
+
+                    <p class="login-link">
+
+                        Already have an account?
+
+                        <a href="home.html">
+
+                            Sign In
+
+                        </a>
+
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <img src="ChatGPT_Image_Jul_11__2026__02_36_46_PM-removebg-preview.png" alt="MARC Logo">
+
+                <h3>MARC Railway Corporation PLC</h3>
+
+                <p>
+                    Providing safe, reliable and convenient railway transportation
+                    services across Nigeria through our modern e-ticketing platform.
+                </p>
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Book Ticket</a></li>
+                    <li><a href="#">Train Timetable</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Contact Us</h3>
+
+                <p>📍 Marc Railway Station, okoko-maiko, Lagos.</p>
+
+                <p>📞 +234 705 201 70328</p>
+
+                <p>✉ info@marcrailway.com</p>
+
+                <p>🕒 Monday - Sunday (6:00 AM - 8:00 PM)</p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Follow Us</h3>
+
+                <div class="social-links">
+
+                    <a href="#">Facebook</a>
+
+                    <a href="#">Instagram</a>
+
+                    <a href="#">Twitter</a>
+
+                    <a href="#">LinkedIn</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 MARC Railway Corporation PLC. All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+
+
+    <script src="register.js"></script>
+</body>
+
+</html>

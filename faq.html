@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>|| FAQ MRC PLC ||</title>
+    <title>|| FAQ, MRC PLC ||</title>
     <link rel="stylesheet" href="faq.css">
 </head>
 
@@ -24,7 +24,9 @@
                     <img src="./ic--outline-menu.svg" alt="Menu" class="menu-icon">
                 </div>
 
-                <button class="register-btn">Register Now</button>
+                <button class="register-btn" onclick="window.location.href='register.html'">
+                    Register Now
+                </button>
             </div>
 
 
@@ -69,33 +71,12 @@
 
                 <!-- Mobile Register Button -->
                 <div class="mobile-register">
-                    <button class="register-btn">
+                    <button class="register-btn-mobile" onclick="window.location.href='register.html'">
                         Register Now
                     </button>
                 </div>
 
             </div>
-
-
-            <!-- <div class="nav-container" id="navMenu">
-                <nav class="navbar">
-                    <a href="home.html"><img src="./material-symbols--home-outline-rounded.svg"
-                            alt=""><span>Home</span></a>
-
-                    <a href="faq.html"><img src="./mdi--question-mark-circle-outline.svg" alt=""><span>FAQ</span></a>
-
-                    <a href="terms-and-conditions.html"><img src="./si--book-line.svg" alt=""><span>Terms &
-                            Conditions</span></a>
-
-                    <a href="privacy-policy.html"><img src="./iconoir--privacy-policy.svg" alt=""><span>Privacy
-                            Policy</span></a>
-
-                    <a href="train-timetables.html"><img src="./material-symbols--train-outline.svg" alt=""><span>Train
-                            Timetables</span></a>
-
-                    <a href="contact-us.html"><img src="./tabler--message.svg" alt=""><span>Contact Us</span></a>
-                </nav>
-            </div> -->
         </div>
 
     </header>
@@ -327,35 +308,7 @@
 
 
 
-
-    <script>
-        const menuIcon = document.querySelector(".menu-icon");
-        const navMenu = document.getElementById("navMenu");
-
-        menuIcon.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-        });
-
-
-
-
-        const faqs = document.querySelectorAll(".faq-item");
-
-        faqs.forEach(faq => {
-            const question = faq.querySelector(".faq-question");
-
-            question.addEventListener("click", () => {
-
-                faqs.forEach(item => {
-                    if (item !== faq) {
-                        item.classList.remove("active");
-                    }
-                });
-
-                faq.classList.toggle("active");
-            });
-        });
-    </script>
+    <script src="faq.js"></script>
 </body>
 
 </html>
