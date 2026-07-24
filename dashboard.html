@@ -24,9 +24,13 @@
                     <img src="./ic--outline-menu.svg" alt="Menu" class="menu-icon">
                 </div>
 
-                <button class="register-btn" onclick="window.location.href='register.html'">
-                    Register Now
-                </button>
+                <div class="user-welcome">
+                    <img src="pexels-photo-414612.jpeg" alt="User">
+                    <div>
+                        <span>Welcome,</span>
+                        <h5>Awet</h5>
+                    </div>
+                </div>
             </div>
 
 
@@ -74,7 +78,250 @@
 
             </div>
         </section>
+
+        <section class="hero-section">
+
+            <img src="./Train-2.jpeg" alt="Train">
+
+            <div class="hero-overlay">
+
+                <div class="booking-card">
+
+                    <h2>Route: LAGOS – IBADAN</h2>
+
+                    <div class="booking-form">
+
+                        <div class="input-group">
+                            <label>From</label>
+
+                            <select id="fromStation">
+                                <option value="" selected disabled>Select Departure Station</option>
+
+                                <option value="Victoria Terminal - Lagos Island">Victoria Terminal - Lagos Island
+                                </option>
+
+                                <option value="Freedom Station - Surulere">Freedom Station - Surulere</option>
+
+                                <option value="Ocean View Terminal - Lekki">Ocean View Terminal - Lekki</option>
+
+                                <option value="Sunrise Station - Ikeja">Sunrise Station - Ikeja</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Destination</label>
+
+                            <select id="toStation">
+
+                                <option value="" selected disabled>Select Destination</option>
+
+                                <option value="Maple Junction - Ibadan North">Maple Junction - Ibadan North</option>
+
+                                <option value="Unity Terminal - Bodija">Unity Terminal - Bodija</option>
+
+                                <option value="Cocoa City Station - Dugbe">Cocoa City Station - Dugbe</option>
+
+                                <option value="Green Valley Station - Challenge">Green Valley Station - Challenge
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="input-group">
+
+                            <label>Departure Date</label>
+
+                            <input type="date" id="travelDate">
+
+                        </div>
+
+                        <button class="find-train-btn" id="findTrainBtn">
+
+                            Find My Train
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="booking-features">
+
+                        <span>✔ Secure Booking</span>
+
+                        <span>✔ Instant Confirmation</span>
+
+                        <span>✔ 24/7 Support</span>
+
+                        <span>✔ Safe Journey</span>
+
+                    </div>
+
+                    <p id="travelTip"></p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SERVICES SECTION -->
+
+        <section class="services-section">
+
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Everything you need for a smooth railway journey.</p>
+            </div>
+
+            <div class="services-container">
+
+                <div class="service-card">
+                    <img src="./material-symbols--train-outline.svg" alt="">
+                    <h3>Book Ticket</h3>
+                    <p>Book train tickets online quickly and securely.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="./mdi--question-mark-circle-outline.svg" alt="">
+                    <h3>Check Schedule</h3>
+                    <p>View train departure and arrival times.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="./tabler--message.svg" alt="">
+                    <h3>Customer Support</h3>
+                    <p>Need help? Contact our customer support team.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="./iconoir--privacy-policy.svg" alt="">
+                    <h3>Travel Policies</h3>
+                    <p>Read our ticketing and travel regulations.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- NOTICE SECTION -->
+
+        <section class="notice-section">
+
+            <div class="section-title">
+                <h2>Travel Information</h2>
+                <p>Stay updated with the latest railway announcements.</p>
+            </div>
+
+            <div class="notice-container">
+
+                <div class="notice-card">
+                    <h3>Train Departure</h3>
+                    <p>
+                        Lagos–Ibadan trains operate daily. Passengers are advised
+                        to arrive at the station at least 30 minutes before departure.
+                    </p>
+                </div>
+
+                <div class="notice-card">
+                    <h3>Online Booking</h3>
+                    <p>
+                        Tickets can be booked online 24 hours a day. Please keep
+                        your booking reference available before boarding.
+                    </p>
+                </div>
+
+                <div class="notice-card">
+                    <h3>Safety Notice</h3>
+                    <p>
+                        Always carry a valid means of identification and follow all
+                        station safety guidelines during your journey.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
     </main>
+
+
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <img src="ChatGPT_Image_Jul_11__2026__02_36_46_PM-removebg-preview.png" alt="MARC Logo">
+
+                <h3>MARC Railway Corporation PLC</h3>
+
+                <p>
+                    Providing safe, reliable and convenient railway transportation
+                    services across Nigeria through our modern e-ticketing platform.
+                </p>
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="dashboard.html">Book Ticket</a></li>
+                    <li><a href="train-timetable.html">Train Timetable</a></li>
+                    <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Contact Us</h3>
+
+                <p>📍 Marc Railway Station, okoko-maiko, Lagos.</p>
+
+                <p>📞 +234 705 201 70328</p>
+
+                <p>✉ info@marcrailway.com</p>
+
+                <p>🕒 Monday - Sunday (6:00 AM - 8:00 PM)</p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Follow Us</h3>
+
+                <div class="social-links">
+
+                    <a href="#">Facebook</a>
+
+                    <a href="#">Instagram</a>
+
+                    <a href="#">Twitter</a>
+
+                    <a href="#">LinkedIn</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 MARC Railway Corporation PLC. All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+
+
+    <script src="dashboard.js"></script>
 </body>
 
 </html>

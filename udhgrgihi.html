@@ -1194,4 +1194,586 @@ body{
 
 
 
+
+
+
+
     👁
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <section class="hero-section">
+            <img src="./Train-2.jpeg" alt="Train">
+
+            <!-- <div class="input-row">
+
+                <div class="input-group">
+                    <label>Date of Birth</label>
+                    <input type="date" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Gender</label>
+
+                    <select required>
+
+                        <option>Male</option>
+
+                        <option>Female</option>
+
+                    </select>
+
+                </div>
+
+            </div> -->
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- ================= AVAILABLE TRAIN SECTION ================= -->
+
+        <section class="available-trains">
+
+            <div class="search-summary">
+
+                <div class="route-details">
+
+                    <div class="route-box">
+                        <h4>From</h4>
+                        <p id="fromStation">Lagos</p>
+                    </div>
+
+                    <div class="route-box">
+                        <h4>Destination</h4>
+                        <p id="toStation">Ibadan</p>
+                    </div>
+
+                    <div class="route-box">
+                        <h4>Travel Date</h4>
+                        <p id="travelDate">24 July 2026</p>
+                    </div>
+
+                </div>
+
+                <button class="modify-btn">
+                    Modify Search
+                </button>
+
+            </div>
+
+            <div class="result-header">
+
+                <h2>Available Trains</h2>
+
+                <span id="totalTrain">
+                    3 Trains Found
+                </span>
+
+            </div>
+
+            <div class="availability">
+
+                <span class="available">
+                    ● Available
+                </span>
+
+                <span class="unavailable">
+                    ● Not Available
+                </span>
+
+            </div>
+
+
+
+            <!-- TRAIN CARD -->
+
+            <div class="train-card">
+
+                <div class="train-top">
+
+                    <div class="train-name">
+
+                        🚆
+
+                        <div>
+
+                            <h3>Morning Express</h3>
+
+                            <small>Train No : MRC001</small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <h2>08:00 AM</h2>
+
+                        <span>Lagos</span>
+
+                    </div>
+
+                    <div class="journey">
+
+                        ───────────────
+
+                        <p>45 mins</p>
+
+                    </div>
+
+                    <div class="time-box">
+
+                        <h2>08:45 AM</h2>
+
+                        <span>Ibadan</span>
+
+                    </div>
+
+                </div>
+
+                <div class="class-container">
+
+                    <div class="class-card">
+
+                        <h3>FIRST CLASS</h3>
+
+                        <p>Adult : ₦9,000</p>
+
+                        <p>Child : ₦9,000</p>
+
+                        <p class="seat available-text">
+                            Seats Left : 18
+                        </p>
+
+                        <button class="book-btn">
+                            Book Now
+                        </button>
+
+                    </div>
+
+                    <div class="class-card">
+
+                        <h3>BUSINESS CLASS</h3>
+
+                        <p>Adult : ₦4,500</p>
+
+                        <p>Child : ₦4,500</p>
+
+                        <p class="seat available-text">
+                            Seats Left : 30
+                        </p>
+
+                        <button class="book-btn">
+                            Book Now
+                        </button>
+
+                    </div>
+
+                    <div class="class-card">
+
+                        <h3>STANDARD CLASS</h3>
+
+                        <p>Adult : ₦3,000</p>
+
+                        <p>Child : ₦2,000</p>
+
+                        <p class="seat available-text">
+                            Seats Left : 55
+                        </p>
+
+                        <button class="book-btn">
+                            Book Now
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .available-trains{
+
+    width:85%;
+    margin:40px auto;
+}
+
+.search-summary{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+    margin-bottom:30px;
+}
+
+.route-details{
+
+    display:flex;
+
+    gap:80px;
+}
+
+.route-box h4{
+
+    color:#777;
+
+    margin-bottom:6px;
+
+    font-size:14px;
+}
+
+.route-box p{
+
+    color:#F97316;
+
+    font-size:18px;
+
+    font-weight:bold;
+}
+
+.modify-btn{
+
+    border:none;
+
+    background:#F97316;
+
+    color:white;
+
+    padding:14px 30px;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.modify-btn:hover{
+
+    background:#d95d05;
+}
+
+.result-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.result-header h2{
+
+    color:#F97316;
+}
+
+#totalTrain{
+
+    font-weight:bold;
+}
+
+.availability{
+
+    display:flex;
+
+    gap:25px;
+
+    margin-bottom:25px;
+}
+
+.available{
+
+    color:green;
+
+    font-weight:bold;
+}
+
+.unavailable{
+
+    color:red;
+
+    font-weight:bold;
+}
+
+.train-card{
+
+    background:white;
+
+    border-radius:15px;
+
+    margin-bottom:30px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.train-card:hover{
+
+    transform:translateY(-5px);
+}
+
+.train-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:30px;
+}
+
+.train-name{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+
+    font-size:28px;
+}
+
+.train-name h3{
+
+    color:#F97316;
+}
+
+.time-box{
+
+    text-align:center;
+}
+
+.time-box h2{
+
+    color:#222;
+}
+
+.time-box span{
+
+    color:#666;
+}
+
+.journey{
+
+    text-align:center;
+
+    color:#888;
+}
+
+.class-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+    padding:25px;
+}
+
+.class-card{
+
+    border:1px solid #eee;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.3s;
+}
+
+.class-card:hover{
+
+    border-color:#F97316;
+
+    transform:translateY(-4px);
+}
+
+.class-card h3{
+
+    color:#F97316;
+
+    margin-bottom:15px;
+}
+
+.class-card p{
+
+    margin:10px 0;
+}
+
+.available-text{
+
+    color:green;
+
+    font-weight:bold;
+}
+
+.book-btn{
+
+    margin-top:18px;
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    background:#F97316;
+
+    color:white;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.book-btn:hover{
+
+    background:#d95d05;
+}
