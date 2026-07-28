@@ -57,7 +57,57 @@
     </header>
 
     <main>
+        <section class="available-trains-section">
 
+            <div class="page-title">
+                <h1>Available Trains</h1>
+                <p>Select your preferred train and travel class.</p>
+            </div>
+
+            <div class="journey-summary">
+
+                <div class="summary-box">
+                    <span>Departure</span>
+                    <h3 id="departureTerminal">-</h3>
+                </div>
+
+                <div class="summary-box">
+                    <span>Destination</span>
+                    <h3 id="destinationTerminal">-</h3>
+                </div>
+
+                <div class="summary-box">
+                    <span>Travel Date</span>
+                    <h3 id="travelDateText">-</h3>
+                </div>
+
+            </div>
+
+            <div class="availability-bar">
+
+                <div class="train-count">
+                    <strong id="trainCount">0</strong> Train(s) Available
+                </div>
+
+                <div class="status">
+
+                    <div class="status-item">
+                        <span class="dot green"></span>
+                        Available
+                    </div>
+
+                    <div class="status-item">
+                        <span class="dot red"></span>
+                        Sold Out
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="trainContainer"></div>
+
+        </section>
     </main>
 
     <footer class="footer">
