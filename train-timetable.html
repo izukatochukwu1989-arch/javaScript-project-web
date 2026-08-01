@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>|| Available trains, MRC PLC ||</title>
-    <link rel="stylesheet" href="available-trains.css">
+    <title>|| Train Timetable, MRC PLC ||</title>
+    <link rel="stylesheet" href="train-timetable.css">
 </head>
 
 <body>
@@ -35,6 +35,18 @@
 
 
             <div class="nav-container" id="navMenu">
+
+                <!-- MOBILE WELCOME -->
+                <div class="mobile-user">
+                    <img src="pexels-photo-414612.jpeg" alt="User">
+
+                    <div>
+                        <span>Welcome,</span>
+                        <h5>Awet</h5>
+                    </div>
+                </div>
+
+
                 <nav class="navbar">
                     <a href="home.html"><img src="./material-symbols--home-outline-rounded.svg"
                             alt=""><span>Home</span></a>
@@ -56,58 +68,88 @@
         </div>
     </header>
 
+
+    <div class="divider-div"></div>
+
     <main>
-        <section class="available-trains-section">
 
-            <div class="page-title">
-                <h1>Available Trains</h1>
-                <p>Select your preferred train and travel class.</p>
+        <section class="timetable-hero">
+            <h1>Train Timetable</h1>
+            <p>
+                View available departure and arrival schedules between
+                Lagos and Ibadan terminals.
+            </p>
+        </section>
+
+        <section class="timetable-section">
+
+            <div class="table-header">
+                <h2>Daily Train Schedule</h2>
+                <p>Monday - Sunday</p>
             </div>
 
-            <div class="journey-summary">
+            <div class="table-responsive">
 
-                <div class="summary-box">
-                    <span>Departure</span>
-                    <h3 id="departureTerminal">-</h3>
-                </div>
+                <table>
 
-                <div class="summary-box">
-                    <span>Destination</span>
-                    <h3 id="destinationTerminal">-</h3>
-                </div>
+                    <thead>
 
-                <div class="summary-box">
-                    <span>Travel Date</span>
-                    <h3 id="travelDateText">-</h3>
-                </div>
+                        <tr>
+                            <th>Train No.</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Departure</th>
+                            <th>Arrival</th>
+                            <th>Duration</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>MRC001</td>
+                            <td>Lagos Terminal 1</td>
+                            <td>Ibadan Terminal 1</td>
+                            <td>06:00 AM</td>
+                            <td>08:10 AM</td>
+                            <td>2 hrs 10 mins</td>
+                        </tr>
+
+                        <tr>
+                            <td>MRC002</td>
+                            <td>Lagos Terminal 2</td>
+                            <td>Ibadan Terminal 2</td>
+                            <td>08:30 AM</td>
+                            <td>10:40 AM</td>
+                            <td>2 hrs 10 mins</td>
+                        </tr>
+
+                        <tr>
+                            <td>MRC003</td>
+                            <td>Lagos Terminal 1</td>
+                            <td>Ibadan Terminal 2</td>
+                            <td>11:00 AM</td>
+                            <td>01:10 PM</td>
+                            <td>2 hrs 10 mins</td>
+                        </tr>
+
+                        <tr>
+                            <td>MRC004</td>
+                            <td>Lagos Terminal 2</td>
+                            <td>Ibadan Terminal 1</td>
+                            <td>02:00 PM</td>
+                            <td>04:10 PM</td>
+                            <td>2 hrs 10 mins</td>
+                        </tr>
+                    </tbody>
+
+                </table>
 
             </div>
-
-            <div class="availability-bar">
-
-                <div class="train-count">
-                    <strong id="trainCount">0</strong> Train(s) Available
-                </div>
-
-                <div class="status">
-
-                    <div class="status-item">
-                        <span class="dot green"></span>
-                        Available
-                    </div>
-
-                    <div class="status-item">
-                        <span class="dot red"></span>
-                        Sold Out
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div id="trainContainer"></div>
 
         </section>
+
     </main>
 
     <footer class="footer">
@@ -181,7 +223,7 @@
 
     </footer>
 
-    <script src="available-trains.js"></script>
+    <script src="train-timetable.js"></script>
 </body>
 
 </html>

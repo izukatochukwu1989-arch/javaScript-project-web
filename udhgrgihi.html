@@ -2516,3 +2516,1049 @@ Retrieving booked tickets
 That API will work directly with the dashboard you've already built.
 
 I prefer this response
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+.table-header{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+}
+
+.timetable-hero h1{
+    font-size:34px;
+}
+
+table{
+    min-width:900px;
+}
+
+}
+
+@media(max-width:768px){
+
+.timetable-hero{
+    width:92%;
+}
+
+.timetable-hero h1{
+    font-size:28px;
+}
+
+.timetable-hero p{
+    font-size:15px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|| Passenger Details, MRC PLC ||</title>
+    <link rel="stylesheet" href="passenger-details.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo-area-container">
+                    <img src="ChatGPT_Image_Jul_11__2026__02_36_46_PM-removebg-preview.png" alt="MARC Logo">
+
+                    <div class="text-area">
+                        <h4>MARC RAILWAY CORPORATION PLC</h4>
+                        <p>E-TICKETING WEBSITE</p>
+                        <h6>LAGOS – IBADAN</h6>
+                    </div>
+
+                    <img src="./ic--outline-menu.svg" alt="Menu" class="menu-icon">
+                </div>
+
+                <div class="user-welcome">
+                    <img src="pexels-photo-414612.jpeg" alt="User">
+                    <div>
+                        <span>Welcome,</span>
+                        <h5>Awet</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="nav-container" id="navMenu">
+                <nav class="navbar">
+                    <a href="home.html"><img src="./material-symbols--home-outline-rounded.svg"
+                            alt=""><span>Home</span></a>
+
+                    <a href="faq.html"><img src="./mdi--question-mark-circle-outline.svg" alt=""><span>FAQ</span></a>
+
+                    <a href="terms-and-conditions.html"><img src="./si--book-line.svg" alt=""><span>Terms &
+                            Conditions</span></a>
+
+                    <a href="privacy-policy.html"><img src="./iconoir--privacy-policy.svg" alt=""><span>Privacy
+                            Policy</span></a>
+
+                    <a href="train-timetable.html"><img src="./material-symbols--train-outline.svg" alt=""><span>Train
+                            Timetables</span></a>
+
+                    <a href="contact-us.html"><img src="./tabler--message.svg" alt=""><span>Contact Us</span></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <div class="welcome-container">
+
+                <div class="welcome-text">
+                    <marquee behavior="scroll" direction="left" scrollamount="6">
+                        Home / Lagos to Ibadan / Passenger Details
+                    </marquee>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <img src="ChatGPT_Image_Jul_11__2026__02_36_46_PM-removebg-preview.png" alt="MARC Logo">
+
+                <h3>MARC Railway Corporation PLC</h3>
+
+                <p>
+                    Providing safe, reliable and convenient railway transportation
+                    services across Nigeria through our modern e-ticketing platform.
+                </p>
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="dashboard.html">Book Ticket</a></li>
+                    <li><a href="train-timetable.html">Train Timetable</a></li>
+                    <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Contact Us</h3>
+
+                <p>📍 Marc Railway Station, okoko-maiko, Lagos.</p>
+
+                <p>📞 +234 705 201 70328</p>
+
+                <p>✉ info@marcrailway.com</p>
+
+                <p>🕒 Monday - Sunday (6:00 AM - 8:00 PM)</p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Follow Us</h3>
+
+                <div class="social-links">
+
+                    <a href="#">Facebook</a>
+
+                    <a href="#">Instagram</a>
+
+                    <a href="#">Twitter</a>
+
+                    <a href="#">LinkedIn</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 MARC Railway Corporation PLC. All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+    <script src="passenger-details.js"></script>
+</body>
+
+</html>                                                                                                                                     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ubuntu', sans-serif;
+    cursor: pointer;
+}
+
+body {
+    background: #f5f5f5;
+    padding-top: 140px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: #fff;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
+
+.header-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 260px;
+}
+
+.logo-area-container {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.logo-area img {
+    height: 100px;
+}
+
+.text-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-area h4 {
+    color: #F97316;
+    font-weight: 700;
+}
+
+.text-area p {
+    color: #F97316;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 3px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.text-area h6 {
+    color: #F97316;
+    font-size: 11px;
+}
+
+/* Hide hamburger on desktop */
+.menu-icon {
+    display: none;
+    width: 34px;
+    cursor: pointer;
+}
+
+.user-welcome {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff7ed;
+    border: 2px solid #F97316;
+    padding: 10px 18px;
+    border-radius: 12px;
+}
+
+.user-welcome img {
+    width: 38px;
+    height: 38px;
+}
+
+.user-welcome span {
+    color: #777;
+    font-size: 13px;
+}
+
+.user-welcome h5 {
+    color: #F97316;
+    font-size: 17px;
+}
+
+/* Navigation Bar */
+
+.nav-container {
+    width: 100%;
+}
+
+.navbar {
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #F97316;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* Icons remain unchanged */
+.navbar a img {
+    height: 18px;
+}
+
+/* Smooth text color transition */
+.navbar a span {
+    transition: color 0.3s ease;
+}
+
+/* Underline */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #F97316;
+    transition: width 0.3s ease;
+}
+
+/* Hover effect */
+.navbar a:hover span {
+    color: #fc6b03;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+
+
+/* WELCOME SECTION */
+.welcome-section {
+    width: 100%;
+    background: #F97316;
+}
+
+.welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    height: 80px;
+}
+
+.welcome-text {
+    flex: 1.7;
+    padding: 0 40px;
+    overflow: hidden;
+}
+
+.welcome-text marquee {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 170px;
+}
+
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #1f2937;
+    color: #fff;
+    margin-top: 80px;
+}
+
+.footer-container {
+    width: 85%;
+    margin: auto;
+    padding: 60px 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+}
+
+.footer-box img {
+    width: 90px;
+    margin-bottom: 15px;
+}
+
+.footer-box h3 {
+    color: #F97316;
+    margin-bottom: 20px;
+    font-size: 22px;
+    cursor: auto;
+}
+
+.footer-box p {
+    color: #d1d5db;
+    line-height: 1.8;
+    font-size: 15px;
+    cursor: auto;
+}
+
+.footer-box ul {
+    list-style: none;
+}
+
+.footer-box ul li {
+    margin-bottom: 12px;
+}
+
+.footer-box ul li a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-box ul li a:hover {
+    color: #F97316;
+    padding-left: 8px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-links a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.social-links a:hover {
+    color: #F97316;
+    transform: translateX(8px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-bottom p {
+    color: #d1d5db;
+    font-size: 14px;
+}    this is all the code i have on the passenger details page, i want u to write the the code for me on the passenger details, the passenger details that will be needed is passenger type ie whether it is an adult or a child, passenger full name, passenger nin number, passenger email, passenger phone number but before the person would input his or details, he or she is going to select their seat number in the train, the seat number should be at least 44, then after that u put 2 buttons one for back and the other for continue, the back button will take me to the available train page while the continue button will take me to the page where i will confirm all my passenger details that i input before making payment for the ticket, after that u style it but i don't want too muc styling, i just want a little bit of styling, after that u make everything responsive and put the nav links inside the hambuger
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Seat Selection -->
+
+                <div class="seat-card">
+
+                    <h3>Select Your Seat</h3>
+
+                    <div id="seatContainer" class="seat-container">
+
+                        <!-- JavaScript will generate Seat 1 - Seat 44 -->
+
+                    </div>
+
+                    <div class="selected-seat">
+
+                        Selected Seat:
+
+                        <span id="selectedSeat">
+                            None
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                /* ================= PASSENGER DETAILS ================= */
+
+.passenger-section{
+    width:100%;
+    padding:50px 20px;
+}
+
+.passenger-container{
+    width:90%;
+    max-width:800px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:8px;
+}
+
+.passenger-container h2{
+    color:#F97316;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    color:#666;
+    margin-bottom:25px;
+}
+
+#passengerForm{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-weight:600;
+    color:#444;
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    outline:none;
+    font-size:15px;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    border-color:#F97316;
+}
+
+/* BUTTONS */
+
+.button-group{
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+}
+
+.back-btn,
+.continue-btn{
+    width:170px;
+    padding:12px;
+    text-align:center;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:600;
+}
+
+.back-btn{
+    border:1px solid #F97316;
+    color:#F97316;
+    background:#fff;
+}
+
+.continue-btn{
+    border:none;
+    background:#F97316;
+    color:#fff;
+}
+
+.back-btn:hover{
+    background:#F97316;
+    color:#fff;
+}
+
+.continue-btn:hover{
+    background:#e96b11;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+.header{
+    padding:0 20px;
+    height:100px;
+}
+
+body{
+    padding-top:100px;
+}
+
+.logo-area{
+    width:100%;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.user-welcome{
+    display:none;
+}
+
+.menu-icon{
+    display:block;
+}
+
+.nav-container{
+    position:absolute;
+    top:100px;
+    left:-100%;
+    width:100%;
+    background:#fff;
+    transition:.3s;
+    box-shadow:0 5px 10px rgba(0,0,0,.1);
+}
+
+.nav-container.active{
+    left:0;
+}
+
+.navbar{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+    height:auto;
+    padding:20px;
+}
+
+.button-group{
+    flex-direction:column;
+    gap:15px;
+}
+
+.back-btn,
+.continue-btn{
+    width:100%;
+}
+
+}
+
+@media(max-width:600px){
+
+.passenger-container{
+    width:95%;
+    padding:20px;
+}
+
+.text-area h4{
+    font-size:15px;
+}
+
+.text-area p{
+    font-size:10px;
+}
+
+.text-area h6{
+    font-size:9px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Seat Selection -->
+
+                <div class="seat-card">
+
+                    <h3>Select Your Seat</h3>
+
+                    <div id="seatContainer" class="seat-container">
+
+                        <!-- JavaScript will generate Seat 1 - Seat 44 -->
+
+                    </div>
+
+                    <div class="selected-seat">
+
+                        Selected Seat:
+
+                        <span id="selectedSeat">
+                            None
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+.header{
+
+    padding:0 40px;
+}
+
+.logo-area{
+
+    gap:80px;
+}
+
+}
+
+@media(max-width:900px){
+
+body{
+
+    padding-top:100px;
+}
+
+.header{
+
+    height:100px;
+    padding:0 20px;
+}
+
+.logo-area{
+
+    width:100%;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo-area img{
+
+    height:70px;
+}
+
+.user-welcome{
+
+    display:none;
+}
+
+.menu-icon{
+
+    display:block;
+}
+
+.nav-container{
+
+    position:absolute;
+    top:100px;
+    left:-100%;
+    width:100%;
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    transition:.3s;
+    padding:20px;
+}
+
+.nav-container.active{
+
+    left:0;
+}
+
+.navbar{
+
+    flex-direction:column;
+    align-items:flex-start;
+    height:auto;
+    gap:20px;
+}
+
+.passenger-container{
+
+    padding:25px;
+}
+
+.seat-container{
+
+    grid-template-columns:repeat(4,60px);
+    gap:12px;
+}
+
+.seat{
+
+    width:60px;
+    height:50px;
+}
+
+.button-group{
+
+    flex-direction:column;
+    gap:15px;
+}
+
+.back-btn,
+.continue-btn{
+
+    width:100%;
+}
+
+.footer-container{
+
+    width:92%;
+}
+
+}
+
+@media(max-width:600px){
+
+.text-area h4{
+
+    font-size:15px;
+}
+
+.text-area p{
+
+    font-size:10px;
+}
+
+.text-area h6{
+
+    font-size:9px;
+}
+
+.passenger-container{
+
+    padding:20px;
+}
+
+.seat-container{
+
+    grid-template-columns:repeat(2,70px);
+}
+
+.welcome-text{
+
+    padding:0 15px;
+}
+
+.welcome-text marquee{
+
+    font-size:14px;
+}
+
+}

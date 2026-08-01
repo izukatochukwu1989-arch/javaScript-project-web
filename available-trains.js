@@ -158,33 +158,24 @@ if (available.length === 0) {
 <h3>Standard Class</h3>
 
 <p>
-
 <span>Adult Fare</span>
 
 <strong>₦${train.price.toLocaleString()}</strong>
-
 </p>
 
 <p>
-
 <span>Child Fare</span>
 
 <strong>₦${Math.round(train.price * 0.5).toLocaleString()}</strong>
-
 </p>
 
 <p>
-
 <span>Seats Available</span>
 
 <strong>${train.seats}</strong>
-
 </p>
 
-<button
-class="book-btn"
-data-train="${train.trainNo}"
-data-class="Standard Class">
+<button class="book-btn"data-train="${train.trainNo}"data-class="Standard Class" onclick="window.location.href='passenger-details.html'">
 
 Book Now
 

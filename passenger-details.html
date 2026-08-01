@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>|| Available trains, MRC PLC ||</title>
-    <link rel="stylesheet" href="available-trains.css">
+    <title>|| Passenger Details, MRC PLC ||</title>
+    <link rel="stylesheet" href="passenger-details.css">
 </head>
 
 <body>
@@ -35,6 +35,16 @@
 
 
             <div class="nav-container" id="navMenu">
+                <div class="mobile-user">
+                    <img src="pexels-photo-414612.jpeg" alt="User">
+
+                    <div>
+                        <span>Welcome,</span>
+                        <h5>Awet</h5>
+                    </div>
+                </div>
+
+
                 <nav class="navbar">
                     <a href="home.html"><img src="./material-symbols--home-outline-rounded.svg"
                             alt=""><span>Home</span></a>
@@ -57,57 +67,129 @@
     </header>
 
     <main>
-        <section class="available-trains-section">
 
-            <div class="page-title">
-                <h1>Available Trains</h1>
-                <p>Select your preferred train and travel class.</p>
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="welcome-container">
+                <div class="welcome-text">
+                    <marquee behavior="scroll" direction="left" scrollamount="6">
+                        Home / Lagos to Ibadan / Passenger Details
+                    </marquee>
+                </div>
             </div>
+        </section>
 
-            <div class="journey-summary">
+        <!-- Passenger Details -->
+        <section class="passenger-section">
 
-                <div class="summary-box">
-                    <span>Departure</span>
-                    <h3 id="departureTerminal">-</h3>
+            <div class="passenger-container">
+
+                <h2>Passenger Details</h2>
+
+                <p class="subtitle">
+                    Please select your preferred seat before entering your passenger details.
+                </p>
+
+                <div class="form-group">
+                    <label for="seatNumber">Seat Number</label>
+
+                    <select id="seatNumber" required>
+                        <option value="">Select Seat Number</option>
+                    </select>
                 </div>
 
-                <div class="summary-box">
-                    <span>Destination</span>
-                    <h3 id="destinationTerminal">-</h3>
-                </div>
+                <!-- Passenger Form -->
 
-                <div class="summary-box">
-                    <span>Travel Date</span>
-                    <h3 id="travelDateText">-</h3>
-                </div>
+                <form id="passengerForm">
 
-            </div>
+                    <div class="form-group">
 
-            <div class="availability-bar">
+                        <label>
+                            Passenger Type
+                        </label>
 
-                <div class="train-count">
-                    <strong id="trainCount">0</strong> Train(s) Available
-                </div>
+                        <select id="passengerType" required>
 
-                <div class="status">
+                            <option value="">
+                                Select Passenger Type
+                            </option>
 
-                    <div class="status-item">
-                        <span class="dot green"></span>
-                        Available
+                            <option value="Adult">
+                                Adult
+                            </option>
+
+                            <option value="Child">
+                                Child
+                            </option>
+
+                        </select>
+
                     </div>
 
-                    <div class="status-item">
-                        <span class="dot red"></span>
-                        Sold Out
+                    <div class="form-group">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <input type="text" id="fullName" placeholder="Enter Full Name" required>
+
                     </div>
 
-                </div>
+                    <div class="form-group">
+
+                        <label>
+                            NIN Number
+                        </label>
+
+                        <input type="text" id="nin" maxlength="11" placeholder="Enter NIN Number" required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <input type="email" id="email" placeholder="Enter Email Address" required>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input type="tel" id="phone" placeholder="Enter Phone Number" required>
+
+                    </div>
+
+                    <!-- Buttons -->
+
+                    <div class="button-group">
+
+                        <a href="available-trains.html" class="back-btn">
+
+                            ← Back
+
+                        </a>
+
+                        <button type="submit" class="continue-btn">
+
+                            Continue →
+
+                        </button>
+
+                    </div>
+
+                </form>
 
             </div>
-
-            <div id="trainContainer"></div>
 
         </section>
+
     </main>
 
     <footer class="footer">
@@ -180,8 +262,7 @@
         </div>
 
     </footer>
-
-    <script src="available-trains.js"></script>
+    <script src="passenger-details.js"></script>
 </body>
 
 </html>
