@@ -1,11 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>|| Confirm Booking, MRC PLC ||</title>
+    <link rel="stylesheet" href="confirm-booking.css">
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo-area-container">
+                    <img src="ChatGPT_Image_Jul_11__2026__02_36_46_PM-removebg-preview.png" alt="MARC Logo">
+
+                    <div class="text-area">
+                        <h4>MARC RAILWAY CORPORATION PLC</h4>
+                        <p>E-TICKETING WEBSITE</p>
+                        <h6>LAGOS – IBADAN</h6>
+                    </div>
+
+                    <img src="./ic--outline-menu.svg" alt="Menu" class="menu-icon">
+                </div>
+
+                <div class="user-welcome">
+                    <img src="pexels-photo-414612.jpeg" alt="User">
+                    <div>
+                        <span>Welcome,</span>
+                        <h5>Awet</h5>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="nav-container" id="navMenu">
+                <div class="mobile-user">
+                    <img src="pexels-photo-414612.jpeg" alt="User">
+
+                    <div>
+                        <span>Welcome,</span>
+                        <h5>Awet</h5>
+                    </div>
+                </div>
+
+                <nav class="navbar">
+                    <a href="home.html"><img src="./material-symbols--home-outline-rounded.svg"
+                            alt=""><span>Home</span></a>
+
+                    <a href="faq.html"><img src="./mdi--question-mark-circle-outline.svg" alt=""><span>FAQ</span></a>
+
+                    <a href="terms-and-conditions.html"><img src="./si--book-line.svg" alt=""><span>Terms &
+                            Conditions</span></a>
+
+                    <a href="privacy-policy.html"><img src="./iconoir--privacy-policy.svg" alt=""><span>Privacy
+                            Policy</span></a>
+
+                    <a href="train-timetable.html"><img src="./material-symbols--train-outline.svg" alt=""><span>Train
+                            Timetables</span></a>
+
+                    <a href="contact-us.html"><img src="./tabler--message.svg" alt=""><span>Contact Us</span></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Welcome Section -->
+
+        <section class="welcome-section">
+
+            <div class="welcome-container">
+
+                <div class="welcome-text">
+
+                    <marquee behavior="scroll" direction="left">
+
+                        Home / Lagos to Ibadan / Confirm Booking
+
+                    </marquee>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="confirm-section">
+
+            <div class="confirm-container">
+
+                <h2>Confirm Your Booking</h2>
+
+                <p class="subtitle">
+
+                    Please review your booking details carefully before proceeding to payment.
+
+                </p>
+
+
+
+                <!-- Journey Details -->
+
+                <div class="details-card">
+
+                    <h3>Journey Details</h3>
+
+                    <div class="details-grid">
+
+                        <p><strong>From:</strong> <span id="fromStation"></span></p>
+
+                        <p><strong>To:</strong> <span id="toStation"></span></p>
+
+                        <p><strong>Travel Date:</strong> <span id="travelDate"></span></p>
+
+                        <p><strong>Departure:</strong> <span id="departureTime"></span></p>
+
+                        <p><strong>Arrival:</strong> <span id="arrivalTime"></span></p>
+
+                        <p><strong>Train:</strong> <span id="trainName"></span></p>
+
+                        <p><strong>Coach:</strong> <span id="coach"></span></p>
+
+                        <p><strong>Seat Number:</strong> <span id="seatNumber"></span></p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Passenger Details -->
+
+                <div class="details-card">
+
+                    <h3>Passenger Details</h3>
+
+                    <div class="details-grid">
+
+                        <p><strong>Passenger Type:</strong> <span id="passengerType"></span></p>
+
+                        <p><strong>Full Name:</strong> <span id="fullName"></span></p>
+
+                        <p><strong>NIN:</strong> <span id="nin"></span></p>
+
+                        <p><strong>Email:</strong> <span id="email"></span></p>
+
+                        <p><strong>Phone:</strong> <span id="phone"></span></p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Fare -->
+
+                <div class="details-card">
+
+                    <h3>Fare Summary</h3>
+
+                    <div class="fare-row">
+
+                        <span>Ticket Fare</span>
+
+                        <span id="ticketPrice"></span>
+
+                    </div>
+
+                    <div class="fare-row">
+
+                        <span>VAT</span>
+
+                        <span id="vat"></span>
+
+                    </div>
+
+                    <div class="fare-row">
+
+                        <span>Service Charge</span>
+
+                        <span id="serviceCharge"></span>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="fare-row total">
+
+                        <span>Total</span>
+
+                        <span id="totalFare"></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="confirmation">
+
+                    <input type="checkbox" id="agree">
+
+                    <label for="agree">
+
+                        I confirm that the information above is correct.
+
+                    </label>
+
+                </div>
+
+                <div class="checkbox-area">
+
+                    <input type="checkbox" id="agree" required>
+
+                    <label for="agree">
+                        I have read and agree to the
+                        <a href="terms-and-conditions.html">Terms & Conditions</a>
+                        and
+                        <a href="privacy-policy.html">Privacy Policy</a>.
+                    </label>
+
+                </div>
+
+
+
+                <div class="button-group">
+
+                    <a href="passenger-details.html" class="back-btn">
+
+                        ← Back
+
+                    </a>
+
+                    <button id="paymentBtn" class="continue-btn" onclick="window.location.href='payment.html'">
+
+                        Proceed to Payment →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <img src="ChatGPT_Image_Jul_11__2026__02_36_46_PM-removebg-preview.png" alt="MARC Logo">
+
+                <h3>MARC Railway Corporation PLC</h3>
+
+                <p>
+                    Providing safe, reliable and convenient railway transportation
+                    services across Nigeria through our modern e-ticketing platform.
+                </p>
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="dashboard.html">Book Ticket</a></li>
+                    <li><a href="train-timetable.html">Train Timetable</a></li>
+                    <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Contact Us</h3>
+
+                <p>📍 Marc Railway Station, okoko-maiko, Lagos.</p>
+
+                <p>📞 +234 705 201 70328</p>
+
+                <p>✉ info@marcrailway.com</p>
+
+                <p>🕒 Monday - Sunday (6:00 AM - 8:00 PM)</p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Follow Us</h3>
+
+                <div class="social-links">
+
+                    <a href="#">Facebook</a>
+
+                    <a href="#">Instagram</a>
+
+                    <a href="#">Twitter</a>
+
+                    <a href="#">LinkedIn</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 MARC Railway Corporation PLC. All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+    <script src="confirm-booking.js"></script>
 </body>
+
 </html>

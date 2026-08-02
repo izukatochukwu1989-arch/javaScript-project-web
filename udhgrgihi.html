@@ -3562,3 +3562,218 @@ body{
 }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+passengerForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // Stop normal form submission
+
+    // You can save the passenger details here later
+
+    window.location.href = "confirm-booking.html";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    document.addEventListener("click", (e) => {
+
+    if (e.target.classList.contains("book-btn")) {
+
+        localStorage.setItem("selectedTrain", e.target.dataset.train);
+
+        localStorage.setItem("selectedClass", e.target.dataset.class);
+
+        window.location.href = "passenger-details.html";
+
+    }
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button class="book-btn"data-train="${train.trainNo}"data-class="Standard Class" onclick="window.location.href='passenger-details.html'">
+
+Book Now
+
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const train = JSON.parse(localStorage.getItem("selectedTrain"));
+const passenger = JSON.parse(localStorage.getItem("bookingData"));
+
+// Terminal Names
+const terminalNames = {
+    LT1: "Terminal 1 (Lagos)",
+    LT2: "Terminal 2 (Lagos)",
+    IB1: "Terminal 1 (Ibadan)",
+    IB2: "Terminal 2 (Ibadan)"
+};
+
+// Fare Calculation
+const vat = train.price * 0.05;
+const serviceCharge = 175;
+const total = train.price + vat + serviceCharge;
+
+// Passenger Details
+document.getElementById("seatNumber").textContent = passenger.seatNumber;
+document.getElementById("passengerType").textContent = passenger.passengerType;
+document.getElementById("fullName").textContent = passenger.fullName;
+document.getElementById("nin").textContent = passenger.nin;
+document.getElementById("email").textContent = passenger.email;
+document.getElementById("phone").textContent = passenger.phone;
+
+// Journey Details
+document.getElementById("fromStation").textContent = terminalNames[train.from];
+document.getElementById("toStation").textContent = terminalNames[train.to];
+document.getElementById("travelDate").textContent = train.date;
+document.getElementById("departureTime").textContent = train.departure;
+document.getElementById("arrivalTime").textContent = train.arrival;
+document.getElementById("trainName").textContent = train.trainName;
+document.getElementById("coach").textContent = train.coach;
+
+// Fare Summary
+document.getElementById("ticketPrice").textContent = `₦${train.price.toLocaleString()}`;
+document.getElementById("vat").textContent = `₦${vat.toLocaleString()}`;
+document.getElementById("serviceCharge").textContent = `₦${serviceCharge.toLocaleString()}`;
+document.getElementById("totalFare").textContent = `₦${total.toLocaleString()}`;
+
+
+
+
+
+
+
+const ticketPrice = train.price;
+const vat = ticketPrice * 0.05;
+const serviceCharge = 175;
+const total = ticketPrice + vat + serviceCharge;
+
+document.getElementById("ticketPrice").textContent =
+    "₦" + ticketPrice.toLocaleString();
+
+document.getElementById("vat").textContent =
+    "₦" + vat.toLocaleString();
+
+document.getElementById("serviceCharge").textContent =
+    "₦" + serviceCharge.toLocaleString();
+
+document.getElementById("totalFare").textContent =
+    "₦" + total.toLocaleString();

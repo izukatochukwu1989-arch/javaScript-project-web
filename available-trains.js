@@ -175,7 +175,10 @@ if (available.length === 0) {
 <strong>${train.seats}</strong>
 </p>
 
-<button class="book-btn"data-train="${train.trainNo}"data-class="Standard Class" onclick="window.location.href='passenger-details.html'">
+<button
+class="book-btn"
+data-train="${train.trainNo}"
+data-class="Standard Class">
 
 Book Now
 
@@ -197,9 +200,20 @@ document.addEventListener("click", (e) => {
 
     if (e.target.classList.contains("book-btn")) {
 
-        localStorage.setItem("selectedTrain", e.target.dataset.train);
+        const trainNo = e.target.dataset.train;
 
-        localStorage.setItem("selectedClass", e.target.dataset.class);
+        const selectedTrain = trains.find(train => train.trainNo === trainNo);
+
+        const trainData = {
+            ...selectedTrain,
+            date: date,
+            coach: e.target.dataset.class
+        };
+
+        localStorage.setItem(
+            "selectedTrain",
+            JSON.stringify(trainData)
+        );
 
         window.location.href = "passenger-details.html";
 

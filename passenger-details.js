@@ -29,9 +29,20 @@ menuIcon.addEventListener("click", () => {
 const passengerForm = document.getElementById("passengerForm");
 
 passengerForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // Stop normal form submission
 
-    // You can save the passenger details here later
+    e.preventDefault();
+
+    const bookingData = {
+        seatNumber: document.getElementById("seatNumber").value,
+        passengerType: document.getElementById("passengerType").value,
+        fullName: document.getElementById("fullName").value,
+        nin: document.getElementById("nin").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value
+    };
+
+    localStorage.setItem("bookingData", JSON.stringify(bookingData));
 
     window.location.href = "confirm-booking.html";
+
 });
