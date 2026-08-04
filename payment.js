@@ -48,17 +48,31 @@ function payNow() {
 
         ref: "MRC" + Date.now(),
 
-        callback: function(response) {
+        callback: function (response) {
+
+            const ticketData = {
+
+                bookingId: "BK" + Date.now(),
+
+                ticketNumber: "TK" + Math.floor(Math.random() * 1000000),
+
+                paymentReference: response.reference,
+
+                paymentStatus: "PAID",
+
+                paymentDate: new Date().toLocaleString()
+
+            };
+
+            localStorage.setItem("ticketData", JSON.stringify(ticketData));
 
             alert("Payment Successful!");
-
-            localStorage.setItem("paymentReference", response.reference);
 
             window.location.href = "ticket.html";
 
         },
 
-        onClose: function() {
+        onClose: function () {
 
             alert("Transaction cancelled");
 

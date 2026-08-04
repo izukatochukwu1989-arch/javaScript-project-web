@@ -1,12 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>|| E-ticket, MRC PLC ||</title>
     <link rel="stylesheet" href="ticket.css">
 </head>
+
 <body>
+
+    <div class="ticket-container">
+
+        <!-- Ticket Header -->
+        <div class="ticket-header">
+            <img src="ChatGPT_Image_Jul_11__2026__02_36_46_PM-removebg-preview.png" alt="MRC Logo" class="logo">
+
+            <div class="company-details">
+                <h1>MARC RAILWAY CORPORATION PLC</h1>
+                <p>Official E-Ticket</p>
+            </div>
+        </div>
+
+        <!-- Booking IDs -->
+        <div class="ticket-id">
+            <div>
+                <strong>Booking ID:</strong>
+                <span id="bookingId"></span>
+            </div>
+
+            <div>
+                <strong>Ticket No:</strong>
+                <span id="ticketNumber"></span>
+            </div>
+        </div>
+
+        <!-- Passenger -->
+        <div class="section">
+            <h2>Passenger Information</h2>
+
+            <div class="info-row">
+                <span>Full Name</span>
+                <strong id="fullName"></strong>
+            </div>
+
+            <div class="info-row">
+                <span>Passenger Type</span>
+                <strong id="passengerType"></strong>
+            </div>
+        </div>
+
+        <!-- Journey -->
+        <div class="section">
+            <h2>Journey Information</h2>
+
+            <div class="info-row">
+                <span>Train Number</span>
+                <strong id="trainNo"></strong>
+            </div>
+
+            <div class="info-row">
+                <span>From</span>
+                <strong id="from"></strong>
+            </div>
+
+            <div class="info-row">
+                <span>To</span>
+                <strong id="to"></strong>
+            </div>
+
+            <div class="info-row">
+                <span>Travel Date</span>
+                <strong id="travelDate"></strong>
+            </div>
+
+            <div class="info-row">
+                <span>Departure Time</span>
+                <strong id="departureTime"></strong>
+            </div>
+
+            <div class="info-row">
+                <span>Arrival Time</span>
+                <strong id="arrivalTime"></strong>
+            </div>
+
+            <div class="info-row">
+                <span>Train</span>
+                <strong id="trainName"></strong>
+            </div>
+
+            <div class="info-row">
+                <span>Coach Class</span>
+                <strong id="coach"></strong>
+            </div>
+
+            <div class="info-row">
+                <span>Seat Number</span>
+                <strong id="seatNumber"></strong>
+            </div>
+        </div>
+
+        <!-- Payment -->
+        <div class="section">
+            <h2>Payment Information</h2>
+
+            <div class="info-row">
+                <span>Amount Paid</span>
+                <strong id="amountPaid"></strong>
+            </div>
+
+            <div class="info-row">
+                <span>Payment Reference</span>
+                <strong id="paymentReference"></strong>
+            </div>
+
+            <div class="info-row">
+                <span>Status</span>
+                <strong class="paid" id="paymentStatus"></strong>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button id="printTicket">Print Ticket</button>
+            <button id="downloadTicket">Download PDF</button>
+            <button onclick="window.location.href='dashboard.html'">
+                Book Another Ticket
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="ticket-footer">
+            <p>
+                Thank you for choosing MARC Railway Corporation PLC.
+                Please arrive at least 30 minutes before departure.
+                Present this ticket during inspection.
+            </p>
+        </div>
+
+    </div>
+
     <script src="ticket.js"></script>
+
 </body>
+
 </html>
